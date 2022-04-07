@@ -1,0 +1,10 @@
+package com.sparta.jpa.repository;
+
+import com.sparta.jpa.model.OrderItem;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface OrderItemRepository extends JpaRepository<OrderItem, Long> {
+    List<OrderItem> findAllByOrdersId(Long id);
+}
